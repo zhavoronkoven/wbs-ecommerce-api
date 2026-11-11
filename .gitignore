@@ -1,0 +1,8 @@
+# Project directories and files
+node_modules/
+dist/
+.env
+
+# System and editor settings
+.vscode/
+.DS_Store
