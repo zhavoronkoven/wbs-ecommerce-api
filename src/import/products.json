@@ -1,0 +1,140 @@
+[
+  {
+    "name": "Threshing Day – Flammengeküsst",
+    "description": "13 Geschichten aus der Welt des Empyrean mit 16 farbigen Illustrationen und wunderschönem Farbschnitt",
+    "price": 28,
+    "category": "Romane"
+  },
+  {
+    "name": "A Court of Splintered Harmony",
+    "description": "Deutsche Ausgabe | Deluxe-Ausgabe mit Farbschnitt | Die Fortsetzung der globalen Romantasy-Bestseller-Reihe",
+    "price": 30,
+    "category": "Romane"
+  },
+  {
+    "name": "Geschichten für den Weihnachtsabend",
+    "description": "Stimmungsvolle Erzählungen vom Schöpfer der Tigerente, Wondrak und Co.",
+    "price": 8,
+    "category": "Romane"
+  },
+  {
+    "name": "Ich dachte, sowas fühl nur ich",
+    "description": "101 Texte, die dein Leben verändern | Nach dem Bestseller «Wehe du gibst auf»: Das neue Buch von Clara Lösel ist da ",
+    "price": 20,
+    "category": "Romane"
+  },
+  {
+    "name": "Love is like a Typhoon",
+    "description": "Roman mit Farbschnitt in limitierter Erstauflage | Der Abschluss der Nr.1-SPIEGEL-Bestseller-Reihe!",
+    "price": 17,
+    "category": "Romane"
+  },
+  {
+    "name": "Purpose. Kannst du deinem Herzen vertrauen?",
+    "description": "Der neue Romance-Thriller von Bestsellerautorin Antonia Wesseling mit Suchtpotential | Limitierte Auflage",
+    "price": 16.99,
+    "category": "Romane"
+  },
+  {
+    "name": "The Peppermint Hot Chocolate Dilemma",
+    "description": "Die knisternde Smalltown-Winter-Romance von Bestsellerautorin Kyra Groh",
+    "price": 16.99,
+    "category": "Romane"
+  },
+  {
+    "name": "Let's be wild",
+    "description": "Exklusiver Farbschnitt in limitierter Erstauflage aus der Reihe Be Wild",
+    "price": 4.99,
+    "category": "Romane"
+  },
+  {
+    "name": "Warm me in Winter. Eine sugar glazed Romance",
+    "description": "Lebkuchenküsse im verschneiten Dream Harbor | Der SPIEGEL-Bestseller!",
+    "price": 14,
+    "category": "Romane"
+  },
+  {
+    "name": "Der Unfall – Kannst du deinen Rettern trauen?",
+    "description": "Ein neuer Psychothriller der aktuell erfolgreichsten Spannungsautorin! Mit Farbschnitt in limitierter Erstauflage",
+    "price": 17,
+    "category": "Krimis"
+  },
+  {
+    "name": "Sie kann dich hören",
+    "description": "Millie ist zurück! Der neue Thriller der SPIEGEL-Bestsellerautorin voller unglaublicher Twists",
+    "price": 17,
+    "category": "Krimis"
+  },
+  {
+    "name": "Wolfsstunde",
+    "description": "Eine Kommune auf dem Land. Ein verschwundenes Kind. Eine Schuld, die Jahrzehnte später ihren Tribut fordert",
+    "price": 23,
+    "category": "Krimis"
+  },
+  {
+    "name": "Mord im Grand Alpine Hotel",
+    "description": "Ein neuer Fall für Miss Marple",
+    "price": 24,
+    "category": "Krimis"
+  },
+  {
+    "name": "Geh deinen Weg, Schildkröte",
+    "description": "Ein Bilderbuch für Kinder ab 3 Jahren über Mut und Zusammenhalt",
+    "price": 16,
+    "category": "Kinderbücher"
+  },
+  {
+    "name": "Das Riesenrad der Gefühle",
+    "description": "Das Kinderbuch zum Spiegel-Bestseller-Platz-1 BESSER FÜHLEN",
+    "price": 18,
+    "category": "Kinderbücher"
+  },
+  {
+    "name": "Ach, so schön ist Panama",
+    "description": "Alle Tiger und Bär-Geschichten in einem Band",
+    "price": 18,
+    "category": "Kinderbücher"
+  },
+  {
+    "name": "Der kleine Papagei",
+    "description": "Pipp auf der Suche nach dem Karneval",
+    "price": 14.95,
+    "category": "Kinderbücher"
+  },
+  {
+    "name": "Vasmora",
+    "description": "Einzigartig atmosphärische Horror Dark Fantasy mit Slow Burn und morally gray Helden",
+    "price": 20,
+    "category": "Fantasy"
+  },
+  {
+    "name": "Falling Midgard",
+    "description": "Mit wunderschönem Farbschnitt, Page Overlay und exklusivem Stickerbogen - nur solange der Vorrat reicht!",
+    "price": 24,
+    "category": "Fantasy"
+  },
+  {
+    "name": "Der Herr der Ringe Luxusausgabe",
+    "description": "In der Übersetzung von Margaret Carroux | Luxusausgabe mit Illustrationen von J.R.R. Tolkien",
+    "price": 88,
+    "category": "Fantasy"
+  },
+  {
+    "name": "Fahrenheit 451",
+    "description": "451 Grad Fahrenheit, 232 Grad Celsius: die Temperatur, bei der Bücherpapier Feuer fängt und verbrennt",
+    "price": 11,
+    "category": "Fantasy"
+  },
+  {
+    "name": "The Poison Daughter",
+    "description": "Die gehypte Dark Romantasy in der wunderschön veredelten Ausgabe",
+    "price": 25,
+    "category": "Fantasy"
+  },
+  {
+    "name": "Das Erbe der Elfen",
+    "description": "Das Buch zur Netflix-Serie 'Der Hexer (The Witcher)",
+    "price": 18,
+    "category": "Fantasy"
+  }
+]
