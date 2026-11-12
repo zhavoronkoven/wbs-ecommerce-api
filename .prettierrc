@@ -1,5 +1,9 @@
 {
-  "printWidth": 9999,
-  "singleAttributePerLine": false,
-  "proseWrap": "preserve"
+  "printWidth": 100,
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "singleQuote": true,
+  "arrowParens": "always",
+  "bracketSpacing": true
 }

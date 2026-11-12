@@ -13,9 +13,13 @@ export async function connect() {
 
   if (!db) throw new Error('MongoDB is not initialized');
 
+  console.log('MongoDB connnected');
+
   return db;
 }
 
 export async function disconnect() {
   await mongoose.disconnect();
+
+  console.log('MongoDB disconnnected');
 }
