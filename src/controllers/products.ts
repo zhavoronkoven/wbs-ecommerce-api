@@ -1,5 +1,6 @@
 import type { Request, Response, NextFunction } from 'express';
 import Product from '../models/Product.ts';
+import Category from '../models/Category.ts';
 
 type ProductQuery = {
   categoryId?: string;
@@ -27,6 +28,13 @@ export const getProducts = async (req: Request, res: Response, next: NextFunctio
 
 export const createProduct = async (req: Request, res: Response, next: NextFunction) => {
   try {
+    const isCategoryExists = await categoryExists(req.body.categoryId);
+
+    if (!isCategoryExists) {
+      res.status(400).json({ message: 'Category not found' });
+      return;
+    }
+
     const product = await Product.create(req.body);
 
     res.status(201).json({
@@ -64,6 +72,15 @@ export const getProductById = async (req: Request, res: Response, next: NextFunc
 
 export const updateProduct = async (req: Request, res: Response, next: NextFunction) => {
   try {
+    if (req.body.categoryId !== undefined) {
+      const exists = await categoryExists(req.body.categoryId);
+
+      if (!exists) {
+        res.status(400).json({ message: 'Category not found' });
+        return;
+      }
+    }
+
     const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
@@ -99,4 +116,10 @@ export const deleteProduct = async (req: Request, res: Response, next: NextFunct
   } catch (error) {
     next(error);
   }
+};
+
+// *** //
+
+const categoryExists = async (categoryId: string) => {
+  return Boolean(await Category.exists({ _id: categoryId }));
 };
