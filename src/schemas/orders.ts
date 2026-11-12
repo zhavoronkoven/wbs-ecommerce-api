@@ -8,7 +8,6 @@ export const orderCreateSchema = z.object({
       quantity: z.number().min(1),
     }),
   ),
-  total: z.number().min(0),
 });
 
 export const orderUpdateSchema = orderCreateSchema.partial();
