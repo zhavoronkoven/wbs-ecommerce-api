@@ -52,7 +52,7 @@ const importData = async () => {
 
       categoryIds.set(categoryData.name, category._id);
 
-      console.log(`Category successfully imported: ${categoryData.name}`);
+      console.log(`Category imported: ${categoryData.name}`);
     }
 
     // Import products
@@ -72,7 +72,7 @@ const importData = async () => {
         categoryId: productCategoryId,
       });
 
-      console.log(`Product successfully imported: ${productData.name}`);
+      console.log(`Product imported: ${productData.name}`);
     }
   } catch (error) {
     console.error('Data import error:', error);
