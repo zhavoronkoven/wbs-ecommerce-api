@@ -42,7 +42,7 @@ export const getUserById = async (req: Request, res: Response, next: NextFunctio
     const user = await User.findById(req.params.id).select('-password');
 
     if (!user) {
-      res.status(404).json({ message: 'User not found' });
+      next({ statusCode: 404, message: 'User not found' });
       return;
     }
 
@@ -64,7 +64,7 @@ export const updateUser = async (req: Request, res: Response, next: NextFunction
     }).select('-password');
 
     if (!user) {
-      res.status(404).json({ message: 'User not found' });
+      next({ statusCode: 404, message: 'User not found' });
       return;
     }
 
@@ -83,7 +83,7 @@ export const deleteUser = async (req: Request, res: Response, next: NextFunction
     const user = await User.findByIdAndDelete(req.params.id);
 
     if (!user) {
-      res.status(404).json({ message: 'User not found' });
+      next({ statusCode: 404, message: 'User not found' });
       return;
     }
 

@@ -9,6 +9,8 @@ import Product from '../models/Product.ts';
 import categories from './categories.json' with { type: 'json' };
 import products from './products.json' with { type: 'json' };
 
+import openapiDocument from './docs/openapi.json' with { type: 'json' };
+
 type CategoryData = {
   name: string;
 };

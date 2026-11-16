@@ -31,7 +31,7 @@ export const createProduct = async (req: Request, res: Response, next: NextFunct
     const isCategoryExists = await categoryExists(req.body.categoryId);
 
     if (!isCategoryExists) {
-      res.status(400).json({ message: 'Category not found' });
+      next({ statusCode: 404, message: 'Category not found' });
       return;
     }
 
@@ -54,7 +54,7 @@ export const getProductById = async (req: Request, res: Response, next: NextFunc
     const product = await Product.findById(req.params.id);
 
     if (!product) {
-      res.status(404).json({ message: 'Product not found' });
+      next({ statusCode: 404, message: 'Product not found' });
       return;
     }
 
@@ -76,7 +76,7 @@ export const updateProduct = async (req: Request, res: Response, next: NextFunct
       const exists = await categoryExists(req.body.categoryId);
 
       if (!exists) {
-        res.status(400).json({ message: 'Category not found' });
+        next({ statusCode: 404, message: 'Category not found' });
         return;
       }
     }
@@ -87,7 +87,7 @@ export const updateProduct = async (req: Request, res: Response, next: NextFunct
     });
 
     if (!product) {
-      res.status(404).json({ message: 'Product not found' });
+      next({ statusCode: 404, message: 'Product not found' });
       return;
     }
 
@@ -108,7 +108,7 @@ export const deleteProduct = async (req: Request, res: Response, next: NextFunct
     const product = await Product.findByIdAndDelete(req.params.id);
 
     if (!product) {
-      res.status(404).json({ message: 'Product not found' });
+      next({ statusCode: 404, message: 'Product not found' });
       return;
     }
 

@@ -34,7 +34,7 @@ export const getCategoryById = async (req: Request, res: Response, next: NextFun
     const category = await Category.findById(req.params.id);
 
     if (!category) {
-      res.status(404).json({ message: 'Category not found' });
+      next({ statusCode: 404, message: 'Category not found' });
       return;
     }
 
@@ -55,7 +55,7 @@ export const updateCategory = async (req: Request, res: Response, next: NextFunc
     });
 
     if (!category) {
-      res.status(404).json({ message: 'Category not found' });
+      next({ statusCode: 404, message: 'Category not found' });
       return;
     }
 
@@ -73,7 +73,7 @@ export const deleteCategory = async (req: Request, res: Response, next: NextFunc
     const category = await Category.findByIdAndDelete(req.params.id);
 
     if (!category) {
-      res.status(404).json({ message: 'Category not found' });
+      next({ statusCode: 404, message: 'Category not found' });
       return;
     }
 
