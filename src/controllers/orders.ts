@@ -30,21 +30,21 @@ export const createOrder = async (req: Request, res: Response, next: NextFunctio
     const isUserExists = await userExists(req.body.userId);
 
     if (!isUserExists) {
-      res.status(400).json({ message: 'User not found' });
+      next({ statusCode: 404, message: 'User not found' });
       return;
     }
 
     const isProductListExists = await productListExist(req.body.products);
 
     if (!isProductListExists) {
-      res.status(400).json({ message: 'Product(s) not found' });
+      next({ statusCode: 404, message: 'Product(s) not found' });
       return;
     }
 
     const total = await calculateTotal(req.body.products);
 
     if (total === null) {
-      res.status(400).json({ message: 'Product(s) not found' });
+      next({ statusCode: 404, message: 'Product(s) not found' });
       return;
     }
 
@@ -66,7 +66,7 @@ export const getOrderById = async (req: Request, res: Response, next: NextFuncti
     const order = await Order.findById(req.params.id);
 
     if (!order) {
-      res.status(404).json({ message: 'Order not found' });
+      next({ statusCode: 404, message: 'Order not found' });
       return;
     }
 
@@ -87,7 +87,7 @@ export const updateOrder = async (req: Request, res: Response, next: NextFunctio
     let products;
 
     if (!orderPrev) {
-      res.status(404).json({ message: 'Order not found' });
+      next({ statusCode: 404, message: 'Order not found' });
       return;
     }
 
@@ -95,7 +95,7 @@ export const updateOrder = async (req: Request, res: Response, next: NextFunctio
       const isUserExists = await userExists(req.body.userId);
 
       if (!isUserExists) {
-        res.status(400).json({ message: 'User not found' });
+        next({ statusCode: 404, message: 'User not found' });
         return;
       }
     }
@@ -104,7 +104,7 @@ export const updateOrder = async (req: Request, res: Response, next: NextFunctio
       const isProductListExists = await productListExist(req.body.products);
 
       if (!isProductListExists) {
-        res.status(400).json({ message: 'Product(s) not found' });
+        next({ statusCode: 404, message: 'Product(s) not found' });
         return;
       }
 
@@ -116,7 +116,7 @@ export const updateOrder = async (req: Request, res: Response, next: NextFunctio
     const total = await calculateTotal(products);
 
     if (total === null) {
-      res.status(400).json({ message: 'Product(s) not found' });
+      next({ statusCode: 404, message: 'Product(s) not found' });
       return;
     }
 
@@ -130,7 +130,7 @@ export const updateOrder = async (req: Request, res: Response, next: NextFunctio
     );
 
     if (!order) {
-      res.status(404).json({ message: 'Order not found' });
+      next({ statusCode: 404, message: 'Order not found' });
       return;
     }
 
@@ -150,7 +150,7 @@ export const deleteOrder = async (req: Request, res: Response, next: NextFunctio
     const order = await Order.findByIdAndDelete(req.params.id);
 
     if (!order) {
-      res.status(404).json({ message: 'Order not found' });
+      next({ statusCode: 404, message: 'Order not found' });
       return;
     }
 
